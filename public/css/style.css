@@ -2,7 +2,7 @@
 :root {
     --primary: #FEA116;
     --light: #F1F8FF;
-    --dark: #0F172B;
+    --dark: #FF597B;
 }
 
 .ff-secondary {
@@ -142,7 +142,7 @@
         z-index: 999;
         background: transparent !important;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: var(--dark) !important;
@@ -152,7 +152,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    background: linear-gradient(rgba(134, 58, 111, 0.8), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -162,10 +162,10 @@
     animation: imgRotate 50s linear infinite;
 }
 
-@keyframes imgRotate { 
-    100% { 
-        transform: rotate(360deg); 
-    } 
+@keyframes imgRotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -476,4 +476,14 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+/* CUSTOM CSS */
+
+.navbar-color {
+    background-color: #FF597B;
+}
+
+.color-txt {
+    color: #f3f3f3 !important;
 }
