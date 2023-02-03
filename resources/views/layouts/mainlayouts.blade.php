@@ -84,7 +84,7 @@
                             <p class="text-white animated slideInLeft mb-4 pb-2">Platform ini menyediakan konten mengenai Seks Edukasi
                                 untuk menambah wawasan anda dan mencegah hal-hal
                                 yang tidak diinginkan</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Mulai</a>
+                            <a href="#mulai" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Mulai</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid rounded-circle" src="img/spinninglogo.png" alt="">

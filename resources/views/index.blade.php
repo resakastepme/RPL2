@@ -1,5 +1,46 @@
 @extends('layouts.mainlayouts')
 @section('content')
+
+<div class="container-xxl py-5" id="mulai">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col">
+                <h1 class="wow fadeInUp" data-wow-delay="0.5s"> THIS IS FIRST CONTAINER </h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr class="wow zoomIn" data-wow-delay="0.5s">
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col">
+                <h1 class="wow fadeInUp" data-wow-delay="0.7s"> THIS IS SECOND CONTAINER </h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr class="wow zoomIn" data-wow-delay="0.7s">
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col">
+                <h1 class="wow fadeInUp" data-wow-delay="0.9s"> THIS IS THIRD CONTAINER </h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr class="wow zoomIn" data-wow-delay="0.9s">
+
 {{-- Service Start --}}
 <div class="container-xxl py-5">
     <div class="container">
@@ -44,6 +85,8 @@
     </div>
 </div>
 <!-- Service End -->
+
+<hr>
 
  <!-- About Start -->
  <div class="container-xxl py-5">
