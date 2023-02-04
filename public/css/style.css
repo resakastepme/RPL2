@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FEA116;
+    --primary: #ffffff;
     --light: #F1F8FF;
     --dark: #FF597B;
 }
@@ -486,4 +486,32 @@
 
 .color-txt {
     color: #f3f3f3 !important;
+}
+/*** Bg Produk ***/
+.bg-produk {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/fotoproduk.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*** Color Button ***/
+.btn-color {
+    color: #FF597B;
+    background-color:#ffffff;
+    border-color: #ffffff;
+}
+/*** Bg Konsul***/
+.bg-konsul {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bgkonsul.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*** Text Color footer ***/
+.text-color {
+    color: #ffffff !important;
+}
+/*** Bg Footer ***/
+.bg-footer {
+    background-color: #FF597B!important;
 }
