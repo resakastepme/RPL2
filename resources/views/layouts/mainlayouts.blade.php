@@ -49,7 +49,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark navbar-color px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="/" class="navbar-brand p-0">
                     <h1 class="color-txt m-0"><i class="fa fa-transgender me-3"></i>SexDu Project</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -62,36 +62,22 @@
                     <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Info SexDu</a>
                             <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Orang Tua</a>
-                                <a href="team.html" class="dropdown-item">Anak</a>
-                                <a href="testimonial.html" class="dropdown-item">Remaja</a>
-                                <a href="testimonial.html" class="dropdown-item">Pasangan</a>
+                                <a href="/orangtua" class="dropdown-item">Orang Tua</a>
+                                <a href="/anak" class="dropdown-item">Anak</a>
+                                <a href="/remaja" class="dropdown-item">Remaja</a>
+                                <a href="/pasangan" class="dropdown-item">Pasangan</a>
                             </div>
                         </div>
-                        <a href="index.html" class="nav-item nav-link">Produk</a>
-                        <a href="about.html" class="nav-item nav-link">Konsultasi</a>
+                        <a href="/produk" class="nav-item nav-link">Produk</a>
+                        <a href="/konsultasi" class="nav-item nav-link">Konsultasi</a>
 
 
 
                 </div>
             </nav>
 
-            <div class="container-xxl py-5 bg-dark hero-header  mb-5">
-                <div class="container my-5 py-5">
-                    <div class="row align-items-center g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Selamat Datang Di,<br>SexDu Project</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Platform ini menyediakan konten mengenai Seks Edukasi
-                                untuk menambah wawasan anda dan mencegah hal-hal
-                                yang tidak diinginkan</p>
-                            <a href="#mulai" class="btn btn-color py-sm-3 px-sm-5 me-3 animated slideInLeft">Mulai</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid rounded-circle" src="img/spinninglogo.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @yield('top.dashboard')
+
         </div>
         <!-- Navbar & Hero End -->
 

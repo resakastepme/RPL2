@@ -489,7 +489,14 @@
 }
 /*** Bg Produk ***/
 .bg-produk {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/fotoproduk.jpeg);
+    background: linear-gradient(rgba(95, 27, 107, 0.9), rgba(15, 23, 43, .9)), url(../img/fotoproduk.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* bg-info */
+.bg-info {
+    background: linear-gradient(rgba(43, 67, 129, 0.9), rgba(15, 23, 43, .9)), url(../img/info.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -502,7 +509,7 @@
 }
 /*** Bg Konsul***/
 .bg-konsul {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bgkonsul.jpeg);
+    background: linear-gradient(rgba(158, 166, 187, 0.9), rgba(15, 23, 43, .9)), url(../img/bgkonsul.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

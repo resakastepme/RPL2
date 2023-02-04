@@ -20,3 +20,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/orangtua', function () {
+    return view('info_orangtua');
+});
+
+Route::get('/remaja', function () {
+    return view('info_remaja');
+});
+
+Route::get('/anak', function () {
+    return view('info_anak');
+});
+
+Route::get('/pasangan', function () {
+    return view('info_pasangan');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+
+Route::get('/konsultasi', function () {
+    return view('konsultasi');
+});
