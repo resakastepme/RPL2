@@ -1,26 +1,29 @@
 @extends('layouts.mainlayouts')
 
 @section('top.dashboard')
-<div class="container-xxl py-5 bg-dark hero-header">
-    <div class="container my-5 py-5">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6 text-center text-lg-start">
-                <h1 class="display-3 text-white animated slideInLeft">Selamat Datang Di,<br>SexDu Project</h1>
-                <p class="text-white animated slideInLeft mb-4 pb-2">Platform ini menyediakan konten mengenai Seks Edukasi
-                    untuk menambah wawasan anda dan mencegah hal-hal
-                    yang tidak diinginkan</p>
-                <a href="#mulai" class="btn btn-color py-sm-3 px-sm-5 me-3 animated slideInLeft">Mulai</a>
-            </div>
-            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                <img class="img-fluid rounded-circle" src="img/spinninglogo.png" alt="">
+    <div class="container-xxl py-5 bg-dark hero-header">
+        <div class="container my-5 py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-3 text-white animated slideInLeft">Selamat Datang Di,<br>SexDu Project</h1>
+                    <p class="text-white animated slideInLeft mb-4 pb-2">Platform ini menyediakan konten mengenai Seks
+                        Edukasi
+                        untuk menambah wawasan anda dan mencegah hal-hal
+                        yang tidak diinginkan</p>
+                    <a href="#mulai_section" id="mulai"
+                        class="btn btn-color py-sm-3 px-sm-5 me-3 animated slideInLeft">Mulai</a>
+                    <button type="button" class="btn btn-success" id="test"> TEST </button>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                    <img class="img-fluid rounded-circle" src="img/spinninglogo.png" alt="">
+                </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
 
 @section('content')
-    <div class="container-xxl bg-info py-5" id="mulai">
+    <div class="container-xxl bg-info py-5" id="mulai_section">
         <div class="container">
             <div class="row">
 
@@ -33,15 +36,19 @@
                         Mulai membaca dengan klik topik artikel dibawah ini ya!
                     </p>
                     <div class="input-group">
-                        <a href="/orangtua" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn" data-wow-delay="1.4s">Orang Tua</a>
+                        <a href="/orangtua" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn"
+                            data-wow-delay="1.4s">Orang Tua</a>
                         <div class="input-group-append">
-                            <a href="/remaja" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn" data-wow-delay="1.1s">Remaja</a>
+                            <a href="/remaja" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn"
+                                data-wow-delay="1.1s">Remaja</a>
                         </div>
                         <div class="input-group-append">
-                            <a href="/anak" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn" data-wow-delay="0.8s">Anak</a>
+                            <a href="/anak" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn"
+                                data-wow-delay="0.8s">Anak</a>
                         </div>
                         <div class="input-group-append">
-                            <a href="/pasangan" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn" data-wow-delay="0.5s">Pasangan</a>
+                            <a href="/pasangan" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn"
+                                data-wow-delay="0.5s">Pasangan</a>
                         </div>
                     </div>
                 </div>
@@ -92,23 +99,8 @@
             </div>
         </div>
     </div>
+@endsection
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-footer text-light footer wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4">About Us</h4>
-                    <p class="text-white animated slideInLeft mb-4 pb-2">SexDu Project adalah sebuah tugas besar dari Bapak
-                        Hanhan Maulana, M.Kom., Ph.D. selaku
-                        Dosen Mata Kuliah Rekayasa Perangkat Lunak 2 </a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4">Others</h4><br>
-                    <a href="#mulai" class="btn btn-color py-sm-1 px-sm-1 me-1 animated slideInLeft">Login As Admin</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+@section('script')
+
 @endsection

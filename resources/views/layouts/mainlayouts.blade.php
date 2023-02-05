@@ -32,6 +32,9 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset ('css/style.css') }}" rel="stylesheet">
+
+    {{-- Sweetalert 2 --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -83,12 +86,35 @@
 
         @yield('content')
 
+        <!-- Footer Start -->
+    <div class="container-fluid bg-footer text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4">About Us</h4>
+                    <p class="text-white animated slideInLeft mb-4 pb-2">SexDu Project adalah sebuah tugas besar dari Bapak
+                        Hanhan Maulana, M.Kom., Ph.D. selaku
+                        Dosen Mata Kuliah Rekayasa Perangkat Lunak 2 </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4">Others</h4><br>
+                    <a href="#mulai" class="btn btn-color py-sm-1 px-sm-1 me-1 animated slideInLeft">Login As Admin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-color btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    @yield('script')
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset ('lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset ('lib/easing/easing.min.js') }}"></script>
@@ -101,6 +127,10 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+
+    <!-- SWEETALERT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.1/sweetalert2.min.js" integrity="sha512-vCI1Ba/Ob39YYPiWruLs4uHSA3QzxgHBcJNfFMRMJr832nT/2FBrwmMGQMwlD6Z/rAIIwZFX8vJJWDj7odXMaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

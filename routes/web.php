@@ -44,3 +44,7 @@ Route::get('/produk', function () {
 Route::get('/konsultasi', function () {
     return view('konsultasi');
 });
+
+// Controller Route
+
+Route::get('/test', [StudentController::class, 'index']);
