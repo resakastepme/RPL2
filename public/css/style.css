@@ -513,9 +513,15 @@
     background-color: #FF597B!important;
 }
 /*** Line Height Description ***/
+.description-height-konsul{
+    line-height: 10%;
+    font-size: 12px;
+}
+/*** Line Height Description ***/
 .description-height{
     line-height: 20%;
 }
+
 
 /*** Search Bar ***/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
@@ -574,3 +580,10 @@
         background: blue;
 
        }
+    /*** crop foto ***/
+.photo-crop{
+    object-fit: cover;
+    object-position: center;
+    height: 150px;
+    width: 300px;
+}
