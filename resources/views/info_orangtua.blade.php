@@ -35,7 +35,7 @@
                                     <p class="description-height">Pendidikan seks merupakan upaya pengajaran,
                                     <p class="description-height">penyadaran, dan pemberian informasi tentang
                                     <p class="description-height">masalah seksual.</p>
-                                    <a href=""> Read More... </a>
+                                    <a href=""> Selengkapnya... </a>
 
                                 </div>
                             </div>
