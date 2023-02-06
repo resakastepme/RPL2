@@ -20,21 +20,19 @@
         <div class="container py-5">
             <div class="row g-5">
 
-                <div class="col-sm-8 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
+
+                    @foreach ($DB as $DATA)
 
                     <div class="service-item">
                         <div class="p-4">
 
                             <div class="input-group">
-                                <img src="{{ asset('img/video.jpeg') }}" style="width: 35%; height: 35%;">
+                                <img src="{{ asset('storage/'.$DATA->gambar) }}" style="width: 35%; height: 35%;">
                                 <div class="input-group-append ms-3">
 
-                                    <h5>Tahapan-tahapan Orang Tua Ajarkan
-                                        <p>Pendidikan Seks pada Anak</p>
-                                    </h5>
-                                    <p class="description-height">Pendidikan seks merupakan upaya pengajaran,
-                                    <p class="description-height">penyadaran, dan pemberian informasi tentang
-                                    <p class="description-height">masalah seksual.</p>
+                                    <h5> {{ $DATA->judul }} </h5>
+                                    <p> {{ $DATA->artikel }} </p>
                                     <a href=""> Read More... </a>
 
                                 </div>
@@ -44,9 +42,11 @@
                         </div>
                     </div>
 
+                    @endforeach
+
                 </div>
 
-                <div class="col-sm-4 text-center wow fadeInUp">
+                <div class="col-md-4 text-center wow fadeInUp">
 
                     <div class="service-item rounded">
 

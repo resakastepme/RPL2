@@ -21,9 +21,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/orangtua', function () {
-    return view('info_orangtua');
-});
+// Route::get('/orangtua', function () {
+//     return view('info_orangtua');
+// });
 
 Route::get('/remaja', function () {
     return view('info_remaja');
@@ -41,6 +41,11 @@ Route::get('/konsultasi', function () {
     return view('konsultasi');
 });
 
+Route::get('/input', function () {
+    return view('input');
+});
+
 // Controller Route
 
-Route::get('/test', [testController::class, 'index']);
+Route::post('/uporangtua', 'App\Http\Controllers\UpOrangtuaController@upload');
+Route::get('/orangtua', 'App\Http\Controllers\OrangtuaController@index');
