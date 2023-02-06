@@ -43,10 +43,6 @@
                                 data-wow-delay="1.1s">Remaja</a>
                         </div>
                         <div class="input-group-append">
-                            <a href="/anak" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn"
-                                data-wow-delay="0.8s">Anak</a>
-                        </div>
-                        <div class="input-group-append">
                             <a href="/pasangan" class="btn btn-color py-sm-3 px-sm-5 me-3 wow bounceIn"
                                 data-wow-delay="0.5s">Pasangan</a>
                         </div>

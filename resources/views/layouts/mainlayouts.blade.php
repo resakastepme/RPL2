@@ -66,7 +66,6 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Info SexDu</a>
                             <div class="dropdown-menu m-0">
                                 <a href="/orangtua" class="dropdown-item">Orang Tua</a>
-                                <a href="/anak" class="dropdown-item">Anak</a>
                                 <a href="/remaja" class="dropdown-item">Remaja</a>
                                 <a href="/pasangan" class="dropdown-item">Pasangan</a>
                             </div>

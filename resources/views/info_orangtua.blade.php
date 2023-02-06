@@ -26,11 +26,14 @@
                         <div class="p-4">
 
                             <div class="input-group">
-                                <img src="{{ asset('img/video.jpg') }}" style="width: 30%; height: 30%;">
+                                <img src="{{ asset('img/video.jpeg') }}" style="width: 35%; height: 35%;">
                                 <div class="input-group-append ms-3">
 
-                                    <h5>Playing Games</h5>
-                                    <p>A person who love competitive B)</p>
+                                    <h5>Tahapan-tahapan Orang Tua Ajarkan 
+                                    <p>Pendidikan Seks pada Anak</p></h5>
+                                    <p class="description-height">Pendidikan seks merupakan upaya pengajaran,
+                                    <p class="description-height">penyadaran, dan pemberian informasi tentang 
+                                    <p class="description-height">masalah seksual.</p>
                                     <a href=""> Read More... </a>
 
                                 </div>
@@ -46,10 +49,9 @@
 
                     <div class="service-item rounded">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-gamepad text-primary"></i>
-                            <h5>Playing Games</h5>
-                            <br>
-                            <p>A person who love competitive B)</p>
+                        <div class="input-group mb-3">
+                         <input type="text" class="form-control">
+                     <div class="input-group-append"><button class="btn btn-primary"><i class="fas fa-search"></i></button></div>
                         </div>
                     </div>
 
@@ -57,10 +59,10 @@
 
                     <div class="service-item rounded">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-gamepad text-primary"></i>
-                            <h5>Playing Games</h5>
+                          
+                            <h5>Artikel Sorotan</h5>
                             <br>
-                            <p>A person who love competitive B)</p>
+                            <p></p>
                         </div>
                     </div>
 
@@ -70,54 +72,4 @@
         </div>
     </div>
 
-    {{-- <div class="row g-5">
-    <div class="col-sm-6">
-        <div class="container">
-            <div class="service-item rounded pt-3">
-
-                <div class="p-4">
-                    <i class="fa fa-3x fa-gamepad text-primary mb-4"></i>
-                    <h5>Playing Games</h5>
-                    <br>
-                    <p>A person who love competitive B)</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-6">
-        <div class="container">
-
-            <div class="service-item rounded pt-3">
-                <div class="p-4">
-                    <i class="fa fa-3x fa-gamepad text-primary mb-4"></i>
-                    <h5>Playing Games</h5>
-                    <br>
-                    <p>A person who love competitive B)</p>
-                </div>
-            </div>
-
-            <div class="service-item rounded pt-3">
-                <div class="p-4">
-                    <i class="fa fa-3x fa-gamepad text-primary mb-4"></i>
-                    <h5>Playing Games</h5>
-                    <br>
-                    <p>A person who love competitive B)</p>
-                </div>
-            </div>
-
-            <div class="service-item rounded pt-3">
-                <div class="p-4">
-                    <i class="fa fa-3x fa-gamepad text-primary mb-4"></i>
-                    <h5>Playing Games</h5>
-                    <br>
-                    <p>A person who love competitive B)</p>
-                </div>
-            </div>
-
-        </div>
-    </div> --}}
-
-    </div>
 @endsection
