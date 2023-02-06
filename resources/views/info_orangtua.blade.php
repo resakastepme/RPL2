@@ -1,6 +1,6 @@
 @extends('layouts.mainlayouts')
 @section('content')
-    <div class="container-xxl py-5 bg-dark hero-header">
+<div class="container-xxl py-5 bg-dark hero-header">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col text-center text-lg-center">
@@ -29,10 +29,11 @@
                                 <img src="{{ asset('img/video.jpeg') }}" style="width: 35%; height: 35%;">
                                 <div class="input-group-append ms-3">
 
-                                    <h5>Tahapan-tahapan Orang Tua Ajarkan 
-                                    <p>Pendidikan Seks pada Anak</p></h5>
+                                    <h5>Tahapan-tahapan Orang Tua Ajarkan
+                                        <p>Pendidikan Seks pada Anak</p>
+                                    </h5>
                                     <p class="description-height">Pendidikan seks merupakan upaya pengajaran,
-                                    <p class="description-height">penyadaran, dan pemberian informasi tentang 
+                                    <p class="description-height">penyadaran, dan pemberian informasi tentang
                                     <p class="description-height">masalah seksual.</p>
                                     <a href=""> Read More... </a>
 
@@ -48,18 +49,21 @@
                 <div class="col-sm-4 text-center wow fadeInUp">
 
                     <div class="service-item rounded">
+
                         <div class="p-4">
-                        <div class="input-group mb-3">
-                         <input type="text" class="form-control">
-                     <div class="input-group-append"><button class="btn btn-primary"><i class="fas fa-search"></i></button></div>
+                            <h5> Cari Artikel </h5>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Cari disini...">
+                                <div class="input-group-append"><button class="btn btn-primary">
+                                    <i class="fas fa-search"></i></button></div>
+                            </div>
                         </div>
+
                     </div>
 
-                    <br>
-
-                    <div class="service-item rounded">
+                    <div class="service-item rounded mt-3">
                         <div class="p-4">
-                          
+
                             <h5>Artikel Sorotan</h5>
                             <br>
                             <p></p>
@@ -67,9 +71,15 @@
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
-</div>
+@endsection
+
+@section('script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert('WOI WOI WOI');
+        });
+    </script>
 @endsection

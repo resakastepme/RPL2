@@ -12,7 +12,7 @@
                         yang tidak diinginkan</p>
                     <a href="#mulai_section" id="mulai"
                         class="btn btn-color py-sm-3 px-sm-5 me-3 animated slideInLeft">Mulai</a>
-                    <button type="button" class="btn btn-success" id="test"> TEST </button>
+                    <a href="/test"> <button type="button" class="btn btn-success" id="test"> TEST </button> </a>
                 </div>
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img class="img-fluid rounded-circle" src="img/spinninglogo.png" alt="">

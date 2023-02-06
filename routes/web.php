@@ -29,10 +29,6 @@ Route::get('/remaja', function () {
     return view('info_remaja');
 });
 
-Route::get('/anak', function () {
-    return view('info_anak');
-});
-
 Route::get('/pasangan', function () {
     return view('info_pasangan');
 });
@@ -47,4 +43,4 @@ Route::get('/konsultasi', function () {
 
 // Controller Route
 
-Route::get('/test', [StudentController::class, 'index']);
+Route::get('/test', [testController::class, 'index']);
