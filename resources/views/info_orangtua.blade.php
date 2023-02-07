@@ -81,7 +81,8 @@
 
                                 <div class="row">
                                     <div class="col-sm-4">
-                                        <img class="card-img" src="{{ asset('storage/' . $DATA->gambar) }}" alt="Card image" style="width: 100%; height: 80%; ">
+                                        <img class="card-img" src="{{ asset('storage/' . $DATA->gambar) }}" alt="Card image"
+                                            style="width: 100%; height: 80%; ">
                                     </div>
                                     <div class="col-sm-8">
                                         <h4 class="card-title"> {{ $DATA->judul }} </h4>
@@ -92,34 +93,51 @@
                             </div>
                         </div>
                         <br>
-
                     @endforeach
 
                     {{ $DB->links() }}
 
                 </div>
 
-                <div class="col-md-4 text-center wow fadeInUp">
+                <div class="col-md-4 wow fadeInUp">
 
                     <div class="service-item rounded">
-
-                        <div class="p-4">
-                            <h5> Cari Artikel </h5>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Cari disini...">
-                                <div class="input-group-append"><button class="btn btn-primary">
-                                        <i class="fas fa-search"></i></button></div>
+                        <form action="/orangtua_cari" method="GET">
+                            <div class="p-4">
+                                <h5> Cari Artikel </h5>
+                                <div class="input-group mb-3">
+                                    <input type="text" name="inputCari" class="form-control" placeholder="Cari disini...">
+                                    <div class="input-group-append">
+                                        <button type="submit" name="btnCari" class="btn btn-primary"><i class="fas fa-search"></i></button></div>
+                                </div>
                             </div>
-                        </div>
+                        </form>
 
                     </div>
 
                     <div class="service-item rounded mt-3">
                         <div class="p-4">
 
-                            <h5>Artikel Sorotan</h5>
-                            <br>
-                            <p></p>
+                            <h5 class="text-center mb-4">Artikel Sorotan</h5>
+
+                            @foreach ($SOROTAN as $DATA)
+                                <hr>
+                                <a href="">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <img src="{{ asset('storage/' . $DATA->gambar) }}" alt=""
+                                                style="width: 120%; height: 80%;">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <h5> {{ $DATA->judul }} </h5>
+                                            <p style="font-size: 10px; color: black;"> {{ substr($DATA->artikel, 0, 40) }}
+                                            </p>
+                                            <p style="font-size: 10px"> Lanjutkan membaca </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            @endforeach
+
                         </div>
                     </div>
 

@@ -49,3 +49,4 @@ Route::get('/input', function () {
 
 Route::post('/uporangtua', 'App\Http\Controllers\UpOrangtuaController@upload');
 Route::get('/orangtua', 'App\Http\Controllers\OrangtuaController@index');
+Route::get('/orangtua_cari', 'App\Http\Controllers\OrangtuaController@cari');

@@ -17,10 +17,12 @@ class OrangtuaController extends Controller
      */
     public function index()
     {
-        $selectDB = DB::table('info_orang_tua')->simplePaginate(5);
+        $selectDB = DB::table('info_orang_tua')->orderByDesc('id')->simplePaginate(5);
+        $selectSorotan = DB::table('info_orang_tua')->orderBy('id', 'ASC')->limit(5)->get();
 
         return view('info_orangtua', [
-            'DB' => $selectDB
+            'DB' => $selectDB,
+            'SOROTAN' => $selectSorotan
         ]);
     }
 
@@ -29,9 +31,24 @@ class OrangtuaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function cari()
     {
-        //
+       if(isset($_REQUEST['btnCari'])){
+
+            $input = $_REQUEST['inputCari'];
+            // $input = "kopi";
+            $selectSorotan = DB::table('info_orang_tua')->orderBy('id', 'ASC')->limit(5)->get();
+
+            $resultDB = DB::table('info_orang_tua')->where('judul', 'LIKE', '%'.$input.'%')->orWhere('artikel', 'LIKE', '%'.$input.'%')->simplePaginate(5);
+
+                return view('info_orangtua', [
+                    'DB' => $resultDB,
+                    'SOROTAN' => $selectSorotan
+                ]);
+
+
+                // return redirect('/orangtua')->with(['error'=>'Tidak Ditemukan']);
+       }
     }
 
     /**
