@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Orangtua;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
@@ -32,19 +33,19 @@ class UpOrangtuaController extends Controller
         $array = array(
             'gambar' => $hashName,
             'judul' => $title,
-            'artikel' => $article
+            'artikel' => $article,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         );
         $insertDB = DB::table('info_orang_tua')->insert($array);
 
-        if($insertDB){
-            $echo = "MESSAGE; SUCCESSFULLY UPDATE TO INFO_ORANG_TUA.. NC BANG";
-        }else{
-            $echo = "ERROR MESSAGE; FAILED TO UPDATE TO DATABASE.. BAD LUCK HAAHAHA";
-        }
+        // if($insertDB){
+        //     $echo = "MESSAGE; SUCCESSFULLY UPDATE TO INFO_ORANG_TUA.. NC BANG";
+        // }else{
+        //     $echo = "ERROR MESSAGE; FAILED TO UPDATE TO DATABASE.. BAD LUCK HAAHAHA";
+        // }
 
-        return view('input', [
-            'echo' => $echo
-        ]);
+        return view('input');
 
     }
 }

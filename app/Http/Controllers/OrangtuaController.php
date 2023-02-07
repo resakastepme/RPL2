@@ -17,7 +17,7 @@ class OrangtuaController extends Controller
      */
     public function index()
     {
-        $selectDB = DB::table('info_orang_tua')->get();
+        $selectDB = DB::table('info_orang_tua')->simplePaginate(5);
 
         return view('info_orangtua', [
             'DB' => $selectDB

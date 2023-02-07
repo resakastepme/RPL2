@@ -44,10 +44,6 @@
 <body>
 
     <div class="container">
-        @if ( $echo == "")
-        @else
-        {{ $echo }}
-        @endif
         <div class="row">
 
             <hr>
@@ -63,8 +59,9 @@
                 <br>
 
                 <p class="mt-4"> ARTIKEL </p>
-                <input type="text" name="artikel" style="width: 100%; height: 100%;">
-
+                {{-- <input type="text" name="artikel" style="width: 100%; height: 100%;"> --}}
+                <textarea name="artikel" id="artikel" cols="100" rows="5"></textarea>
+<br>
                 <button type="submit" class="btn btn-primary mt-3"> UPDATE </button>
             </form>
 
