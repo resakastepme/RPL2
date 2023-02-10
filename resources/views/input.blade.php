@@ -58,9 +58,12 @@
 
                 <br>
 
-                <p class="mt-4"> ARTIKEL </p>
+                <p class="mt-4"> ARTIKEL (html_entity_decode) </p>
                 {{-- <input type="text" name="artikel" style="width: 100%; height: 100%;"> --}}
-                <textarea name="artikel" id="artikel" cols="100" rows="5"></textarea>
+                <textarea name="artikel" id="artikel" cols="111" rows="19"></textarea>
+<br>
+                <label for="sumberpenulis"> Sumber/Penulis (html_entity_decode): </label>
+                <input type="text" id="sumberpenulis" id="sumberpenulis" name="sumberpenulis" style="width: 49%;">
 <br>
                 <button type="submit" class="btn btn-primary mt-3"> UPDATE </button>
             </form>

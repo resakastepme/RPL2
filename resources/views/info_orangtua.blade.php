@@ -1,5 +1,10 @@
 @extends('layouts.mainlayouts')
 @section('content')
+
+    <?php
+        error_reporting(0)
+    ?>
+
     <div class="container-xxl py-5 bg-dark hero-header">
         <div class="container py-5">
             <div class="row align-items-center">
@@ -21,6 +26,10 @@
             <div class="row g-5">
 
                 <div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <section id="sectionCari" style="display: none;">
+                        <h1> Anda mencari "{{ $input }}" </h1>
+                    </section>
 
                     @foreach ($DB as $DATA)
                         {{-- <div class="service-item">
@@ -86,8 +95,8 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <h4 class="card-title"> {{ $DATA->judul }} </h4>
-                                        <p class="card-text"> {{ substr($DATA->artikel, 0, 150) }}... </p>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Lanjutkan membaca</a>
+                                        <p class="card-text"> {!! html_entity_decode(substr($DATA->artikel, 0, 150)) !!}... </p>
+                                        <a href="/orangtua/{{ $DATA->id }}/view" class="btn btn-sm btn-outline-primary">Lanjutkan membaca</a>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +131,7 @@
 
                             @foreach ($SOROTAN as $DATA)
                                 <hr>
-                                <a href="">
+                                <a href="/orangtua/{{ $DATA->id }}/view">
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <img src="{{ asset('storage/' . $DATA->gambar) }}" alt=""
@@ -149,8 +158,14 @@
 
 @section('script')
     <script type="text/javascript">
-        $(document).ready(function() {
-            alert('WOI WOI WOI');
-        });
+
+        var input = "<?php echo $input; ?>";
+
+        if(input == ""){
+
+        }else{
+            $('#sectionCari').show();
+        }
+
     </script>
 @endsection

@@ -29,11 +29,13 @@ class UpOrangtuaController extends Controller
 
         $title = $request->input('judul');
         $article = $request->input('artikel');
+        $source = $request->input('sumberpenulis');
 
         $array = array(
             'gambar' => $hashName,
             'judul' => $title,
             'artikel' => $article,
+            'sumberpenulis' => $source,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         );

@@ -36,6 +36,7 @@ class OrangtuaController extends Controller
        if(isset($_REQUEST['btnCari'])){
 
             $input = $_REQUEST['inputCari'];
+            // $sectionCari = "CARI";
             // $input = "kopi";
             $selectSorotan = DB::table('info_orang_tua')->orderBy('id', 'ASC')->limit(5)->get();
 
@@ -43,12 +44,26 @@ class OrangtuaController extends Controller
 
                 return view('info_orangtua', [
                     'DB' => $resultDB,
-                    'SOROTAN' => $selectSorotan
+                    'SOROTAN' => $selectSorotan,
+                    'input' => $input
                 ]);
 
 
                 // return redirect('/orangtua')->with(['error'=>'Tidak Ditemukan']);
        }
+    }
+
+    public function view($id){
+
+        // $testDB = DB::table('info_orang_tua')->where('id', 18)->get();
+
+        $selectDB = DB::table('info_orang_tua')->where('id', $id)->get();
+        $SOROTAN = DB::table('info_orang_tua')->orderBy('id', 'ASC')->limit(5)->get();
+
+        return view('view_info_orangtua', [
+            'selectDB' => $selectDB,
+            'SOROTAN' => $SOROTAN
+        ]);
     }
 
     /**

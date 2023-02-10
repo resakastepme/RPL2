@@ -12,7 +12,6 @@
                         yang tidak diinginkan</p>
                     <a href="#mulai_section" id="mulai"
                         class="btn btn-color py-sm-3 px-sm-5 me-3 animated slideInLeft">Mulai</a>
-                    <a href="/test"> <button type="button" class="btn btn-success" id="test"> TEST </button> </a>
                 </div>
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img class="img-fluid rounded-circle" src="img/spinninglogo.png" alt="">
@@ -98,5 +97,63 @@
 @endsection
 
 @section('script')
-
+    <script type="text/javascript">
+        Swal.fire({
+            icon: 'info',
+            title: 'Dengan klik tombol "Lanjutkan" anda sudah berumur 18+',
+            allowOutsideClick: false,
+            showDenyButton: true,
+            confirmButtonText: 'Lanjutkan',
+            denyButtonText: `Saya belum 18+`,
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                let timerInterval
+                Swal.fire({
+                    title: 'Anda menyatakan sudah 18+',
+                    html: 'Selamat datang!',
+                    timer: 2000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                            b.textContent = Swal.getTimerLeft()
+                        }, 100)
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval)
+                    }
+                }).then((result) => {
+                    /* Read more about handling dismissals below */
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        console.log('I was closed by the timer')
+                    }
+                })
+            } else if (result.isDenied) {
+                let timerInterval
+                Swal.fire({
+                    title: 'Website ini hanya untuk 18+',
+                    html: 'Mengarahkan ke Google...',
+                    timer: 2000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                            b.textContent = Swal.getTimerLeft()
+                        }, 100)
+                    },
+                    willClose: () => {
+                        window.location.href = 'https://www.google.com/';
+                    }
+                }).then((result) => {
+                    /* Read more about handling dismissals below */
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        console.log('I was closed by the timer')
+                    }
+                })
+            }
+        })
+    </script>
 @endsection
