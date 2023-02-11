@@ -1,5 +1,6 @@
 @extends('layouts.mainlayouts')
 @section('content')
+
     <?php
     error_reporting(0);
     ?>
@@ -9,7 +10,7 @@
             <div class="row align-items-center">
                 <div class="col text-center text-lg-center">
                     <h1 class="display-3 text-white animated slideInLeft">Temukan berbagai artikel menarik khusus untuk para
-                        orang tua!</h1>
+                        Remaja!</h1>
                     <p class="text-white animated slideInLeft">
                         Scroll ke bawah untuk berbagai artikel yang menarik!
                     </p>
@@ -32,7 +33,8 @@
                             <div class="row">
 
                                 <h1 class="text-center mb-5"> {{ $selectDB[0]->judul }} </h1>
-                                <img src="{{ asset('storage/'.$selectDB[0]->gambar) }}" style="width: 80%; height: 80%; margin: auto;">
+                                <img src="{{ asset('storage/' . $selectDB[0]->gambar) }}"
+                                    style="width: 80%; height: 80%; margin: auto;">
 
                                 <div class="mt-5">
                                     {!! html_entity_decode($selectDB[0]->artikel) !!}
@@ -62,7 +64,7 @@
 
                             @foreach ($SOROTAN as $DATA)
                                 <hr>
-                                <a href="/orangtua/{{ $DATA->id }}/view">
+                                <a href="/remaja/{{ $DATA->id }}/view">
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <img src="{{ asset('storage/' . $DATA->gambar) }}" alt=""
@@ -70,7 +72,7 @@
                                         </div>
                                         <div class="col-sm-9">
                                             <h5> {{ $DATA->judul }} </h5>
-                                            <p style="font-size: 10px; color: black;"> {!! html_entity_decode(substr($DATA->artikel, 0, 40)) !!}
+                                            <p style="font-size: 10px; color: black;"> {!! html_entity_decode(substr($DATA->artikel, 0, 100)) !!}
                                             </p>
                                             <p style="font-size: 10px"> Lanjutkan membaca </p>
                                         </div>

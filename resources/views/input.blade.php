@@ -46,7 +46,7 @@
     <div class="container">
         <div class="row">
 
-            <hr>
+            <hr id="info_orang_tua">
             <h5> INFO_ORANG_TUA </h5>
             <form method="POST" action="/uporangtua" enctype="multipart/form-data">
                 @csrf
@@ -58,15 +58,66 @@
 
                 <br>
 
-                <p class="mt-4"> ARTIKEL (html_entity_decode) </p>
+                <p class="mt-4"> ARTIKEL (html_entity_decode) || {{ $artikel = '<p style="">  </p> || <p style="font-weight: bold">  </p> || <p style="font-size: 10px">   </p> || <p style="color: red"> </p>' }} </p>
+                {{-- <input type="text" name="artikel" style="width: 100%; height: 100%;"> --}}
+                <textarea name="artikel" id="artikel" cols="111" rows="19"></textarea>
+<br>
+                <label for="sumberpenulis"> Sumber/Penulis (html_entity_decode): </label>
+                <input type="text" id="sumberpenulis" id="sumberpenulis" name="sumberpenulis" style="width: 49%;"><br>
+                {{ $sumber = '<a href="https://" target="_blank">  </a>' }}
+<br>
+                <button type="submit" class="btn btn-primary mt-3"> UPDATE </button>
+            </form>
+
+            <hr class="mt-5 mb-5">
+
+            <h5 id="info_remaja"> INFO_REMAJA </h5>
+            <form method="POST" action="/upremaja" enctype="multipart/form-data">
+                @csrf
+                <label for="img">GAMBAR :</label>
+                <input type="file" id="img" name="img" accept="image/*">
+
+                <label for="judul"> JUDUL : </label>
+                <input type="text" id="judul" name="judul">
+
+                <br>
+
+                <p class="mt-4"> ARTIKEL (html_entity_decode) || {{ $artikel }} </p>
                 {{-- <input type="text" name="artikel" style="width: 100%; height: 100%;"> --}}
                 <textarea name="artikel" id="artikel" cols="111" rows="19"></textarea>
 <br>
                 <label for="sumberpenulis"> Sumber/Penulis (html_entity_decode): </label>
                 <input type="text" id="sumberpenulis" id="sumberpenulis" name="sumberpenulis" style="width: 49%;">
+                <p> {{ $sumber }} </p>
 <br>
-                <button type="submit" class="btn btn-primary mt-3"> UPDATE </button>
+                <button type="submit" class="btn btn-primary"> UPDATE </button>
             </form>
+
+            <hr class="mt-5 mb-5">
+
+            <h5 id="info_pasangan"> INFO_PASANGAN </h5>
+            <form method="POST" action="/uppasangan" enctype="multipart/form-data">
+                @csrf
+                <label for="img">GAMBAR :</label>
+                <input type="file" id="img" name="img" accept="image/*">
+
+                <label for="judul"> JUDUL : </label>
+                <input type="text" id="judul" name="judul">
+
+                <br>
+
+                <p class="mt-4"> ARTIKEL (html_entity_decode) || {{ $artikel }} </p>
+                {{-- <input type="text" name="artikel" style="width: 100%; height: 100%;"> --}}
+                <textarea name="artikel" id="artikel" cols="111" rows="19"></textarea>
+<br>
+                <label for="sumberpenulis"> Sumber/Penulis (html_entity_decode): </label>
+                <input type="text" id="sumberpenulis" id="sumberpenulis" name="sumberpenulis" style="width: 49%;">
+                <p> {{ $sumber }} </p>
+<br>
+                <button type="submit" class="btn btn-primary"> UPDATE </button>
+            </form>
+
+            <hr class="mt-5 mb-5">
 
         </div>
     </div>

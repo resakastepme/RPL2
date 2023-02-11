@@ -111,7 +111,8 @@
                 <div class="col-md-4 wow fadeInUp">
 
                     <div class="service-item rounded">
-                        <form action="/orangtua_cari" method="GET">
+                        <form action="/orangtua_cari" method="POST">
+                            @csrf
                             <div class="p-4">
                                 <h5> Cari Artikel </h5>
                                 <div class="input-group mb-3">

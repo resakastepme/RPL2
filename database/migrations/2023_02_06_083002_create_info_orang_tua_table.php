@@ -14,13 +14,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('info_orang_tua', function (Blueprint $table) {
-            $table->id();
-            $table->string('gambar');
-            $table->string('judul');
-            $table->text('artikel');
-            $table->timestamps();
-        });
+        // Schema::create('info_orang_tua', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('gambar');
+        //     $table->string('judul');
+        //     $table->text('artikel');
+        //     $table->timestamps();
+        // });
+
+            Schema::table('info_orang_tua', function (Blueprint $table) {
+
+                 $table->text('sumberpenulis')->after('artikel');
+
+            });
+
     }
 
     /**
@@ -30,6 +37,11 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('info_orang_tua');
+        // Schema::dropIfExists('info_orang_tua');
+
+        Schema::table('info_remaja', function(Blueprint $table){
+            $table->dropColumn('sumberpenulis');
+        });
+
     }
 };

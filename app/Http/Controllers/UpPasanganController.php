@@ -2,27 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Orangtua;
+use App\Models\Pasangan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\View;
 
-class UpOrangtuaController extends Controller
+class UpPasanganController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function upload(request $request){
 
-    public function upload(Request $request)
-    {
         $file = $request->hasFile('img');
 
         if($file){
             $newFile = $request->file('img');
-            $hashName = $newFile->store('images/info_orangtua');
+            $hashName = $newFile->store('images/info_pasangan');
         }else{
             echo " ERROR MESSAGE; THE FILE NOT UPLOADED.. YET.. I GUESS.. TRY AGAIN.. ";
         }
@@ -39,7 +32,7 @@ class UpOrangtuaController extends Controller
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         );
-        $insertDB = DB::table('info_orang_tua')->insert($array);
+        $insertDB = DB::table('info_pasangan')->insert($array);
 
         // if($insertDB){
         //     $echo = "MESSAGE; SUCCESSFULLY UPDATE TO INFO_ORANG_TUA.. NC BANG";
@@ -47,7 +40,7 @@ class UpOrangtuaController extends Controller
         //     $echo = "ERROR MESSAGE; FAILED TO UPDATE TO DATABASE.. BAD LUCK HAAHAHA";
         // }
 
-        return redirect('/input#info_orang_tua');
+        return redirect('/input#info_pasangan');
 
     }
 }
