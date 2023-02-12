@@ -33,9 +33,9 @@ Route::get('/', function () {
 //     return view('info_pasangan');
 // });
 
-Route::get('/produk', function () {
-    return view('produk');
-});
+// Route::get('/produk', function () {
+//     return view('produk');
+// });
 
 Route::get('/konsultasi', function () {
     return view('konsultasi');
@@ -50,6 +50,7 @@ Route::get('/input', function () {
 Route::post('/uporangtua', 'App\Http\Controllers\UpOrangtuaController@upload');
 Route::post('/upremaja', 'App\Http\Controllers\UpRemajaController@upload');
 Route::post('/uppasangan', 'App\Http\Controllers\UpPasanganController@upload');
+Route::post('/upproduk', 'App\Http\Controllers\UpProdukController@upload');
 
 Route::get('/orangtua', 'App\Http\Controllers\OrangtuaController@index');
 Route::post('/orangtua_cari', 'App\Http\Controllers\OrangtuaController@cari');
@@ -62,3 +63,7 @@ Route::get('/remaja/{id}/view', 'App\Http\Controllers\RemajaController@view');
 Route::get('/pasangan', 'App\Http\Controllers\PasanganController@index');
 Route::post('/pasangan_cari', 'App\Http\Controllers\PasanganController@cari');
 Route::get('/pasangan/{id}/view', 'App\Http\Controllers\PasanganController@view');
+
+Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
+Route::post('/produk_cari', 'App\Http\Controllers\ProdukController@cari');
+Route::get('/produk/{id}/view', 'App\Http\Controllers\ProdukController@view');
