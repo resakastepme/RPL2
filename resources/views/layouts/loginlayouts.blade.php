@@ -37,8 +37,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
 </head>
 
-<body>
-    <div class="container-xxl bg-white p-0">
+<body class="bg-dark">
+    <div class="container-xxl p-2">
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -56,71 +56,15 @@
                     <h1 class="color-txt m-0"><i class="fa fa-transgender me-3"></i>SexDu Project</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Info SexDu</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="/orangtua" class="dropdown-item">Orang Tua</a>
-                                <a href="/remaja" class="dropdown-item">Remaja</a>
-                                <a href="/pasangan" class="dropdown-item">Pasangan</a>
-                            </div>
-                        </div>
-                        <a href="/produk" class="nav-item nav-link">Produk</a>
-                        <a href="/konsultasi" class="nav-item nav-link">Konsultasi</a>
-
-
-
-                    </div>
-                </div>
             </nav>
-
-            @yield('top.dashboard')
-
         </div>
-        <!-- Navbar & Hero End -->
 
-        @yield('content')
+        @yield('top.dashboard')
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-footer text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-4 col-md-4">
-                        <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4">Project</h4>
-                        <p class="text-white animated slideInLeft mb-4 pb-2">SexDu Project adalah sebuah tugas besar
-                            dari Bapak
-                            Hanhan Maulana, M.Kom., Ph.D. selaku
-                            Dosen Mata Kuliah Rekayasa Perangkat Lunak 2 </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4"> About Us </h4>
-                        <p class="text-white animated slideInLeft">
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4">Others</h4><br>
-                        <a href="/login" class="btn btn-color py-sm-1 px-sm-1 me-1 animated slideInLeft">Login As
-                            Admin</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-color btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <!-- Navbar & Hero End -->
+
+    @yield('content')
 
     <!-- JavaScript Libraries -->
 

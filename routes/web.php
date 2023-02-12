@@ -72,3 +72,15 @@ Route::get('/produk/{id}/view', 'App\Http\Controllers\ProdukController@view');
 Route::get('/konsultasi', 'App\Http\Controllers\konsultasiController@index');
 Route::post('/konsultasi_cari', 'App\Http\Controllers\konsultasiController@cari');
 Route::get('/konsultasi/{id}/view', 'App\Http\Controllers\konsultasiController@view');
+
+// ADMIN ----------------------------------------------------------------------------------
+
+// Route::get('/login', 'App\Http\Controllers\LoginController@index');
+
+Route::get('/login', function () {
+    return view('admin/login');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin/dashboard');
+});

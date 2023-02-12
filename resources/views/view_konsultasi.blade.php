@@ -36,10 +36,11 @@
                                     style="width: 80%; height: 80%; margin: auto;">
 
                                 <div class="mt-5">
-                                    {!! html_entity_decode($selectDB[0]->deskripsi) !!}
+                                    <h4> Gejala: </h4>
+                                    <p> {!! html_entity_decode($selectDB[0]->gejala) !!} </p>
                                 </div>
                                 <div class="mt-5">
-                                    {!! html_entity_decode($selectDB[0]->gejala) !!}
+                                    {!! html_entity_decode($selectDB[0]->deskripsi) !!}
                                 </div>
 
                                 <hr class="mt-5 wow zoomIn" data-wow-delay="1s">
