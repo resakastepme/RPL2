@@ -51,6 +51,7 @@ Route::post('/uporangtua', 'App\Http\Controllers\UpOrangtuaController@upload');
 Route::post('/upremaja', 'App\Http\Controllers\UpRemajaController@upload');
 Route::post('/uppasangan', 'App\Http\Controllers\UpPasanganController@upload');
 Route::post('/upproduk', 'App\Http\Controllers\UpProdukController@upload');
+Route::post('/upkonsultasi', 'App\Http\Controllers\UpKonsultasiController@upload');
 
 Route::get('/orangtua', 'App\Http\Controllers\OrangtuaController@index');
 Route::post('/orangtua_cari', 'App\Http\Controllers\OrangtuaController@cari');
@@ -67,3 +68,7 @@ Route::get('/pasangan/{id}/view', 'App\Http\Controllers\PasanganController@view'
 Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
 Route::post('/produk_cari', 'App\Http\Controllers\ProdukController@cari');
 Route::get('/produk/{id}/view', 'App\Http\Controllers\ProdukController@view');
+
+Route::get('/konsultasi', 'App\Http\Controllers\konsultasiController@index');
+Route::post('/konsultasi_cari', 'App\Http\Controllers\konsultasiController@cari');
+Route::get('/konsultasi/{id}/view', 'App\Http\Controllers\konsultasiController@view');

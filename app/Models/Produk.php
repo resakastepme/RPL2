@@ -15,7 +15,7 @@ class Produk extends Model
     protected $primaryKey = "id";
     // NENTUAIN COLOUMN MANA YANG BISA DI ISI
     protected $fillable = [
-        'gambar', 'judul', 'deskripsi'
+        'gambar', 'judul', 'deskripsi','sumberpenulis'
     ];
     // PAKE TIMESTAMPS ATAU ENGGA? KALO ENGGA ISI FALSE
     public $timestamps = true;

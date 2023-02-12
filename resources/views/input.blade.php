@@ -142,7 +142,33 @@
             </form>
 
             <hr class="mt-5 mb-5">
+            <h5 id="konsultasi"> KONSULTASI </h5>
+            <form method="POST" action="/upkonsultasi" enctype="multipart/form-data">
+                @csrf
+                <label for="img">GAMBAR :</label>
+                <input type="file" id="img" name="img" accept="image/*">
 
+                <label for="judul"> JUDUL : </label>
+                <input type="text" id="judul" name="judul">
+
+                <br>
+
+                <p class="mt-4"> DESKRIPSI </p>
+                {{-- <input type="text" name="deskripsi" style="width: 100%; height: 100%;"> --}}
+                <textarea name="deskripsi" id="deskripsi" cols="111" rows="19"></textarea>
+
+                <p class="mt-4"> GEJALA </p>
+                {{-- <input type="text" name="gejala" style="width: 100%; height: 100%;"> --}}
+                <textarea name="gejala" id="gejala" cols="50" rows="10"></textarea>
+<br>
+                <label for="sumberpenulis"> Sumber/Penulis (html_entity_decode): </label>
+                <input type="text" id="sumberpenulis" id="sumberpenulis" name="sumberpenulis" style="width: 49%;">
+                <p> {{ $sumber }} </p>
+<br>
+                <button type="submit" class="btn btn-primary"> UPDATE </button>
+            </form>
+
+            <hr class="mt-5 mb-5">
         </div>
     </div>
 

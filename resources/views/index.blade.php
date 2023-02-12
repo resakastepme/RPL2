@@ -100,17 +100,17 @@
     <script type="text/javascript">
         Swal.fire({
             icon: 'info',
-            title: 'Dengan klik tombol "Lanjutkan" anda sudah berumur 18+',
+            title: 'Dengan klik tombol "Lanjutkan" anda sudah berumur 13+',
             allowOutsideClick: false,
             showDenyButton: true,
             confirmButtonText: 'Lanjutkan',
-            denyButtonText: `Saya belum 18+`,
+            denyButtonText: `Saya belum 13+`,
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 let timerInterval
                 Swal.fire({
-                    title: 'Anda menyatakan sudah 18+',
+                    title: 'Anda menyatakan sudah 13+',
                     html: 'Selamat datang!',
                     timer: 2000,
                     timerProgressBar: true,
@@ -133,7 +133,7 @@
             } else if (result.isDenied) {
                 let timerInterval
                 Swal.fire({
-                    title: 'Website ini hanya untuk 18+',
+                    title: 'Website ini hanya untuk 13+',
                     html: 'Mengarahkan ke Google...',
                     timer: 2000,
                     timerProgressBar: true,
