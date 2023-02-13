@@ -74,6 +74,16 @@
 
         @yield('content')
 
+        <!-- Footer Start -->
+        <div class="container-fluid bg-footer text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row text-center">
+                    <p class="text-white animated slideInLeft"> Made with ☠️ by us. </a>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
         <!-- JavaScript Libraries -->
 
 

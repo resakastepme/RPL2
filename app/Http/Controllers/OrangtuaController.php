@@ -7,6 +7,7 @@ use Illuminate\Console\View\Components\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class OrangtuaController extends Controller
 {
@@ -66,59 +67,47 @@ class OrangtuaController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function show(){
+
+        $selectDB = DB::table('info_orang_tua')->get();
+
+        return view('admin.orangtua.index', [
+            'selectDB' => $selectDB
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Orangtua  $orangtua
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Orangtua $orangtua)
-    {
-        //
+    public function modaltambah(){
+
+        return view('admin.orangtua.viewtambah');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Orangtua  $orangtua
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Orangtua $orangtua)
-    {
-        //
+    public function tambah(Request $request){
+
+        // $data = $request->all();
+        // dd($data);
+
+        // return redirect();
+
+        $validator = Validator::make($request->all(),[
+            'img' => 'required|image',
+            // 'judul' => 'required|string',
+            // 'sumber' => 'required|string',
+            // 'artikel' => 'required|string'
+        ]);
+
+        if(!$validator->passes()){
+            return response()->json(['code' => 0]);
+        }else{
+            $path = "images/info_orangtua";
+            $file = $request->file('img');
+
+            $upload = $file->store($path);
+
+            if($upload){
+                return response()->json(['code' => 1]);
+            }
+        }
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Orangtua  $orangtua
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Orangtua $orangtua)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Orangtua  $orangtua
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Orangtua $orangtua)
-    {
-        //
-    }
 }

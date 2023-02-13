@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrangtuaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -84,3 +85,8 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return view('admin/dashboard');
 });
+
+Route::get('/show-orangtua', 'App\Http\Controllers\OrangtuaController@show');
+Route::get('/modaltambah-orangtua', 'App\Http\Controllers\OrangtuaController@modaltambah');
+Route::post('/tambah-orangtua', 'App\Http\Controllers\OrangtuaController@tambah')->name('tambah-orangtua');
+Route::post('/tambah-orangtua', [OrangtuaController::class, 'tambah'])->name('tambah-orangtua');
