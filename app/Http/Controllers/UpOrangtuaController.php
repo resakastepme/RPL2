@@ -41,13 +41,9 @@ class UpOrangtuaController extends Controller
         );
         $insertDB = DB::table('info_orang_tua')->insert($array);
 
-        // if($insertDB){
-        //     $echo = "MESSAGE; SUCCESSFULLY UPDATE TO INFO_ORANG_TUA.. NC BANG";
-        // }else{
-        //     $echo = "ERROR MESSAGE; FAILED TO UPDATE TO DATABASE.. BAD LUCK HAAHAHA";
-        // }
+        sleep(2);
 
-        return redirect('/input#info_orang_tua');
+        return redirect('/orangtua/admin#mulai');
 
     }
 }

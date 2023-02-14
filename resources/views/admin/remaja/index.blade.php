@@ -5,7 +5,7 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg text-center text-lg-center">
-                    <h1 class="display-3 text-white animated zoomIn">KELOLA INFO ORANG TUA</h1>
+                    <h1 class="display-3 text-white animated zoomIn">KELOLA INFO REMAJA</h1>
                     <p class="text-white animated zoomIn mb-5">
                         Gunakan tombol pada menu untuk navigasi!
                     </p>
@@ -19,11 +19,11 @@
 
 @section('content')
     <div class="container-xxl bg-light p-5">
-        <h2>INFO ORANG TUA</h2>
+        <h2>INFO REMAJA</h2>
 
         <div class="row">
             <div class="col-md-8">
-                <a href="{{ url('/tambah/orangtua/admin#mulai') }}">
+                <a href="{{ url('/tambah/remaja/admin#mulai') }}">
                     <button type="button" class="btn btn-success mb-2" name="btnTambah" id="btnTambah"> + Tambah Data
                     </button>
                 </a>
@@ -59,16 +59,16 @@
                         <td>
 
                             <div class="input-group">
-                                <a href="/orangtua/{{ $DATA->id }}/view/admin#mulai"> <button type="button"
+                                <a href="/remaja/{{ $DATA->id }}/view/admin#mulai"> <button type="button"
                                         class="btn btn-success" name="btnView" id="btnView"> <i class="fa fa-eye"></i>
                                     </button></a>
                                 <div class="input-group-append ms-1">
-                                    <a href="/orangtua/{{ $DATA->id }}/edit/admin#mulai"><button type="button"
+                                    <a href="/remaja/{{ $DATA->id }}/edit/admin#mulai"><button type="button"
                                             class="btn btn-warning" name="btnEdit" id="btnEdit"> <i class="fa fa-pen"></i>
                                         </button></a>
                                 </div>
                                 <div class="input-group-append ms-1">
-                                    <a href="/orangtua/{{ $DATA->id }}/hapus/proses/admin#mulai" name="btnHapus"
+                                    <a href="/remaja/{{ $DATA->id }}/hapus/proses/admin#mulai" name="btnHapus"
                                         id="btnHapus" data-id="{{ $DATA->id }}"
                                         data-judul="{{ $DATA->judul }}"><button type="button" class="btn btn-danger"> <i
                                                 class="fa fa-trash"></i> </button></a>
@@ -197,7 +197,7 @@
             }).then((result) => {
                 /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
-                    window.location.href = "/orangtua/" + id + "/hapus/proses/admin#mulai";
+                    window.location.href = "/remaja/" + id + "/hapus/proses/admin#mulai";
                 }
             })
 

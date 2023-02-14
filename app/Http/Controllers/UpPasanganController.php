@@ -33,14 +33,9 @@ class UpPasanganController extends Controller
             'updated_at' => Carbon::now()
         );
         $insertDB = DB::table('info_pasangan')->insert($array);
+        sleep(2);
 
-        // if($insertDB){
-        //     $echo = "MESSAGE; SUCCESSFULLY UPDATE TO INFO_ORANG_TUA.. NC BANG";
-        // }else{
-        //     $echo = "ERROR MESSAGE; FAILED TO UPDATE TO DATABASE.. BAD LUCK HAAHAHA";
-        // }
-
-        return redirect('/input#info_pasangan');
+        return redirect('/pasangan/admin#mulai');
 
     }
 }

@@ -34,13 +34,9 @@ class UpRemajaController extends Controller
         );
         $insertDB = DB::table('info_remaja')->insert($array);
 
-        // if($insertDB){
-        //     $echo = "MESSAGE; SUCCESSFULLY UPDATE TO INFO_ORANG_TUA.. NC BANG";
-        // }else{
-        //     $echo = "ERROR MESSAGE; FAILED TO UPDATE TO DATABASE.. BAD LUCK HAAHAHA";
-        // }
+        sleep(2);
 
-        return redirect('/input#info_remaja');
+        return redirect('/remaja/admin#mulai');
 
     }
 }

@@ -33,7 +33,7 @@ class UpKonsultasiController extends Controller
         $deskripsi = $request->input('deskripsi');
         $gejala = $request->input('gejala');
         $sumber = $request->input('sumberpenulis');
-        
+
 
         $array = array(
             'gambar' => $hashName,
@@ -51,7 +51,9 @@ class UpKonsultasiController extends Controller
         $insertDB = DB::table('konsultasi')->insert($array);
 
             // SEHABIS PENCET TOMBOL UPDATE, MAU DI ARAHKAN KEMANA?
-        return redirect('/input#konsultasi');
+            sleep(2);
+
+            return redirect('/konsultasi/admin#mulai');
     }
 
     /**

@@ -76,17 +76,70 @@ Route::get('/konsultasi/{id}/view', 'App\Http\Controllers\konsultasiController@v
 
 // ADMIN ----------------------------------------------------------------------------------
 
-// Route::get('/login', 'App\Http\Controllers\LoginController@index');
-
-Route::get('/login', function () {
+Route::get('/login/admin', function () {
     return view('admin/login');
 });
+Route::post('/login/proses/admin', 'App\Http\Controllers\SessionController@login');
 
-Route::get('/dashboard', function () {
+Route::get('/logout/admin', function () {
+    session()->pull('nama');
+    session()->pull('attempt');
+
+    return redirect('/login/admin');
+});
+
+Route::get('/dashboard/admin', function () {
     return view('admin/dashboard');
 });
 
-Route::get('/show-orangtua', 'App\Http\Controllers\OrangtuaController@show');
-Route::get('/modaltambah-orangtua', 'App\Http\Controllers\OrangtuaController@modaltambah');
-Route::post('/tambah-orangtua', 'App\Http\Controllers\OrangtuaController@tambah')->name('tambah-orangtua');
-Route::post('/tambah-orangtua', [OrangtuaController::class, 'tambah'])->name('tambah-orangtua');
+Route::get('/orangtua/admin', 'App\Http\Controllers\OrangtuaController@show')->name('orangtua');
+Route::get('/tambah/orangtua/admin', function () {
+    return view('admin.orangtua.tambah');
+});
+Route::get('/orangtua/{id}/view/admin', 'App\Http\Controllers\OrangtuaController@viewAdmin');
+Route::get('/orangtua/{id}/edit/admin', 'App\Http\Controllers\OrangtuaController@editAdmin');
+Route::post('/orangtua/{id}/edit/proses/admin', 'App\Http\Controllers\OrangtuaController@editProses')->name('edit.proses.orangtua');
+Route::get('/orangtua/{id}/hapus/proses/admin', 'App\Http\Controllers\OrangtuaController@hapusProses');
+
+Route::get('/remaja/admin', 'App\Http\Controllers\RemajaController@show')->name('remaja');
+Route::get('/tambah/remaja/admin', function () {
+    return view('admin.remaja.tambah');
+});
+Route::get('/remaja/{id}/view/admin', 'App\Http\Controllers\RemajaController@viewAdmin');
+Route::get('/remaja/{id}/edit/admin', 'App\Http\Controllers\RemajaController@editAdmin');
+Route::post('/remaja/{id}/edit/proses/admin', 'App\Http\Controllers\RemajaController@editProses')->name('edit.proses.remaja');
+Route::get('/remaja/{id}/hapus/proses/admin', 'App\Http\Controllers\RemajaController@hapusProses');
+
+Route::get('/pasangan/admin', 'App\Http\Controllers\PasanganController@show')->name('pasangan');
+Route::get('/tambah/pasangan/admin', function () {
+    return view('admin.pasangan.tambah');
+});
+Route::get('/pasangan/{id}/view/admin', 'App\Http\Controllers\PasanganController@viewAdmin');
+Route::get('/pasangan/{id}/edit/admin', 'App\Http\Controllers\PasanganController@editAdmin');
+Route::post('/pasangan/{id}/edit/proses/admin', 'App\Http\Controllers\PasanganController@editProses')->name('edit.proses.pasangan');
+Route::get('/pasangan/{id}/hapus/proses/admin', 'App\Http\Controllers\PasanganController@hapusProses');
+
+Route::get('/produk/admin', 'App\Http\Controllers\ProdukController@show')->name('produk');
+Route::get('/tambah/produk/admin', function () {
+    return view('admin.produk.tambah');
+});
+Route::get('/produk/{id}/view/admin', 'App\Http\Controllers\ProdukController@viewAdmin');
+Route::get('/produk/{id}/edit/admin', 'App\Http\Controllers\ProdukController@editAdmin');
+Route::post('/produk/{id}/edit/proses/admin', 'App\Http\Controllers\ProdukController@editProses')->name('edit.proses.produk');
+Route::get('/produk/{id}/hapus/proses/admin', 'App\Http\Controllers\ProdukController@hapusProses');
+
+Route::get('/konsultasi/admin', 'App\Http\Controllers\KonsultasiController@show')->name('konsultasi');
+Route::get('/tambah/konsultasi/admin', function () {
+    return view('admin.konsultasi.tambah');
+});
+Route::get('/konsultasi/{id}/view/admin', 'App\Http\Controllers\KonsultasiController@viewAdmin');
+Route::get('/konsultasi/{id}/edit/admin', 'App\Http\Controllers\KonsultasiController@editAdmin');
+Route::post('/konsultasi/{id}/edit/proses/admin', 'App\Http\Controllers\KonsultasiController@editProses')->name('edit.proses.konsultasi');
+Route::get('/konsultasi/{id}/hapus/proses/admin', 'App\Http\Controllers\KonsultasiController@hapusProses');
+
+Route::get('/kelola/admin', 'App\Http\Controllers\KelolaController@show')->name('kelola');
+Route::get('/tambah/kelola/admin', function () {
+    return view('admin.kelola.tambah');
+});
+Route::post('/kelola/tambah/proses/admin', 'App\Http\Controllers\KelolaController@tambahProses');
+Route::get('/kelola/{id}/hapus/proses/admin', 'App\Http\Controllers\KelolaController@hapusProses');

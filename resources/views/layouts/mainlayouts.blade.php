@@ -110,7 +110,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4">Others</h4><br>
-                        <a href="/login" class="btn btn-color py-sm-1 px-sm-1 me-1 animated slideInLeft">Login As
+                        <a href="/login/admin" class="btn btn-color py-sm-1 px-sm-1 me-1 animated slideInLeft">Login As
                             Admin</a>
                     </div>
                 </div>

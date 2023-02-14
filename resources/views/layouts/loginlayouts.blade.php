@@ -48,17 +48,6 @@
         </div>
         <!-- Spinner End -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark navbar-color px-4 px-lg-5 py-3 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    <h1 class="color-txt m-0"><i class="fa fa-transgender me-3"></i>SexDu Project</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-            </nav>
-        </div>
-
         @yield('top.dashboard')
 
     </div>

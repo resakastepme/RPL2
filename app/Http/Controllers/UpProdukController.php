@@ -48,7 +48,9 @@ class UpProdukController extends Controller
         $insertDB = DB::table('produk')->insert($array);
 
             // SEHABIS PENCET TOMBOL UPDATE, MAU DI ARAHKAN KEMANA?
-        return redirect('/input#produk');
+            sleep(2);
+
+            return redirect('/produk/admin#mulai');
     }
 
     /**
