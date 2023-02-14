@@ -98,14 +98,14 @@
                             Dosen Mata Kuliah Rekayasa Perangkat Lunak 2 </a>
                     </div>
                     <div class="col-lg-4 col-md-4">
-                        <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4"> About Us </h4>
+                        <h4 class="section-title ff-secondary text-start text-color fw-normal mb-4"> Kelompok Kami </h4>
                         <p class="text-white animated slideInLeft">
                             10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
-                            10120132 - Resa Komara Akbari <br>
+                            10120129 - Ahmad Syafi'i Assidiq <br>
+                            10120156 - Aditya Mahendra Pamungkas <br>
+                            10120138 - Falentinus Kebubun <br>
+                            10120164 - Muhamad Hasbi Fadilah <br>
+                            10120136 - Alif Aziz Alviansyah <br>
                         </p>
                     </div>
                     <div class="col-lg-4 col-md-4">

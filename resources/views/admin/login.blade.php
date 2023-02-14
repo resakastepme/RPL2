@@ -12,7 +12,7 @@
                             <div class="p-5 animated flipInX" data-wow-delay="0.2s">
                                 <h1 class="text-white text-center mb-4"> Login </h1>
 
-                                <form method="POST" action="/login/proses/admin">
+                                <form method="POST" action="/login/proses/admin" id="form">
                                     @csrf
                                     <div class="row g-3">
                                         <div class="col-12">
@@ -65,19 +65,47 @@
                 icon: 'error',
                 title: 'Tidak ada data yang cocok!'
             })
-            @elseif (session('alert')  == "logindulu")
+        @elseif (session('alert') == 'logindulu')
 
             Swal.fire({
                 icon: 'warning',
                 title: 'Silahkan login!'
             })
-            @elseif (session('alert')  == "sesihabis")
+        @elseif (session('alert') == 'sesihabis')
 
             Swal.fire({
                 icon: 'warning',
                 title: 'Sesi anda telah berakhir!'
             })
-
         @endif
+
+        $(document).ready(function() {
+
+            $('#login').click(function(e) {
+
+                e.preventDefault();
+
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                if (username) {
+                    if (password) {
+                        $('#form').submit();
+                    } else {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Form tidak lengkap!'
+                        })
+                    }
+                } else {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Form tidak lengkap!'
+                    })
+                }
+
+            });
+
+        });
     </script>
 @endsection
